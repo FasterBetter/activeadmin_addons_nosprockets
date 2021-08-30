@@ -7,23 +7,18 @@ require "activeadmin_addons/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "activeadmin_addons"
+  s.name        = "activeadmin_addons_nosprockets"
   s.version     = ActiveadminAddons::VERSION
   s.authors     = ["Platanus", "Julio García", "Emilio Blanco", "Leandro Segovia"]
   s.email       = ["rubygems@platan.us", "julioggonz@gmail.com", "emilioeduardob@gmail.com", "ldlsegovia@gmail.com"]
   s.homepage    = "https://github.com/platanus/activeadmin_addons"
-  s.summary     = "Set of addons to help with the activeadmin ui"
-  s.description = "Set of addons to help with the activeadmin ui"
+  s.summary     = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"
+  s.description = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  # s.add_dependency "active_material"
-  # s.add_dependency "railties"
   s.add_dependency "require_all"
-  # s.add_dependency "sassc"
-  # s.add_dependency "sassc-rails"
-  # s.add_dependency "xdan-datetimepicker-rails", "~> 2.5.1"
 
   s.add_development_dependency "aasm"
   s.add_development_dependency "capybara-selenium"

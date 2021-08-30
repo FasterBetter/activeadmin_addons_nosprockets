@@ -11,7 +11,7 @@ module ActiveadminAddons
         if use_webpacker?
           generate "activeadmin_addons:webpacker"
         else
-          generate "activeadmin_addons:assets"
+          raise "You seem to still be using Sprockets.  Please use the main activeadmin_addons gem."
         end
       end
 

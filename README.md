@@ -6,6 +6,8 @@ Please see the original for a guide on the functionality available.
 
 This gem is meant to be a drop-in replacement that hopefully can be retired sooner rather than later.  That said, I haven't tried to exercise all of its functionality at the time of this writing.  Contributions to shore up issues specific to this fork are welcome, including bug reports to notify me of specific breakage.
 
+Also, if you work on this gem, please note that I am not attempting to preserve the asset management itself:  Upstream publishes an NPM package, and we want to rely on that entirely.
+
 ## Installation
 
 Add this line to your application's Gemfile:

@@ -22,7 +22,7 @@ module ActiveAdminAddons
 
     def build_label
       icon = icon_for_filename(file.original_filename)
-      style = { width: "20", height: "20", style: "margin-right: 5px; vertical-align: middle;" }
+      style = { width: "20", height: "20", style: "margin-right: 5px; vertical-align: middle;", skip_pipeline: true }
       icon_img = context.image_tag(icon, style)
       text = label_text
 

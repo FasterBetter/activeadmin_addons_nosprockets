@@ -30,7 +30,21 @@ Gem::Specification.new do |s|
   s.add_development_dependency "paperclip"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
-  s.add_development_dependency "rails", "~> 5.2", ">= 5.2.4.1"
+
+  RAILS_VERSION_SPECIFIER = ["~> 5.2", ">= 5.2.4.1"].freeze
+  # gem "activemodel", *RAILS_VERSION_SPECIFIER
+  # gem "activejob", *RAILS_VERSION_SPECIFIER
+  gem "activerecord", *RAILS_VERSION_SPECIFIER
+  # gem "activestorage", *RAILS_VERSION_SPECIFIER
+  gem "actionpack", *RAILS_VERSION_SPECIFIER # ActionController
+  gem "actionview", *RAILS_VERSION_SPECIFIER
+  # gem "actionmailer", *RAILS_VERSION_SPECIFIER
+  # gem "actionmailbox", *RAILS_VERSION_SPECIFIER
+  # gem "actiontext", *RAILS_VERSION_SPECIFIER
+  # gem "actioncable", *RAILS_VERSION_SPECIFIER
+  gem "activesupport", *RAILS_VERSION_SPECIFIER
+  gem "railties", *RAILS_VERSION_SPECIFIER
+
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "rubocop", "~> 0.65.0"

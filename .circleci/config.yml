@@ -4,7 +4,6 @@ env-vars: &env-vars
   RAILS_ENV: test
   NODE_ENV: test
   BUNDLE_PATH: vendor/bundle
-  SPROCKETS: false
 
 orbs:
   ruby: circleci/ruby@0.1.2
@@ -91,14 +90,6 @@ jobs:
           command: |
             RSPEC_JUNIT_ARGS="-r rspec_junit_formatter -f RspecJunitFormatter -o test_results/webpack-rspec.xml"
             RSPEC_FORMAT_ARGS="-f progress --no-color -p 10"
-            export SPROCKETS=false
-            bundle exec rspec ./spec/features $RSPEC_FORMAT_ARGS $RSPEC_JUNIT_ARGS
-      - run:
-          name: Run Sprockets Tests
-          command: |
-            RSPEC_JUNIT_ARGS="-r rspec_junit_formatter -f RspecJunitFormatter -o test_results/sprockets-rspec.xml"
-            RSPEC_FORMAT_ARGS="-f progress --no-color -p 10"
-            export SPROCKETS=true
             bundle exec rspec ./spec/features $RSPEC_FORMAT_ARGS $RSPEC_JUNIT_ARGS
       - store_test_results:
           path: test_results

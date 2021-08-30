@@ -35,17 +35,7 @@ bin/webpack-dev-server
 
 **With Sprockets:**
 
-```
-export SPROCKETS=true; bin/rails s
-```
-
-And if you change the javascript, you will need to run the following command:
-
-```
-bundle exec rake prepare_assets
-```
-
-> It is a good idea to add to the dummy app any new functionality. See for example the file: `/spec/dummy/app/admin/invoices.rb`
+__Sprockets is explicitly not supported on this fork.  Please see the upstream.__
 
 ## Testing
 
@@ -55,17 +45,11 @@ If you're using homebrew on OS X you can do: `brew install chromedriver`.
 To run the tests you can do, in the root of the gem:
 
 ```
-# For running the full setup (sprockets and webpacker)
+# For running the full setup
 bundle exec rake all_tests
 
 # For running helper specs (/lib directory)
 bundle exec rake tests
-
-# For running with webpacker only
-bundle exec rake webpack_tests
-
-# For running with sprockets only
-bundle exec rake sprockets_tests
 ```
 
 - The addons specs we put them inside `/spec/features`.

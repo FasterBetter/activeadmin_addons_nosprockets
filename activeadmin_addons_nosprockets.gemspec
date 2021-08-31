@@ -31,19 +31,19 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
 
-  RAILS_VERSION_SPECIFIER = [">= 5.2.4.1", "< 7"].freeze
-  # gem "activemodel", *RAILS_VERSION_SPECIFIER
-  # gem "activejob", *RAILS_VERSION_SPECIFIER
-  gem "activerecord", *RAILS_VERSION_SPECIFIER
-  # gem "activestorage", *RAILS_VERSION_SPECIFIER
-  gem "actionpack", *RAILS_VERSION_SPECIFIER # ActionController
-  gem "actionview", *RAILS_VERSION_SPECIFIER
-  # gem "actionmailer", *RAILS_VERSION_SPECIFIER
-  # gem "actionmailbox", *RAILS_VERSION_SPECIFIER
-  # gem "actiontext", *RAILS_VERSION_SPECIFIER
-  # gem "actioncable", *RAILS_VERSION_SPECIFIER
-  gem "activesupport", *RAILS_VERSION_SPECIFIER
-  gem "railties", *RAILS_VERSION_SPECIFIER
+  RAILS_VERSION_SPECIFIER = ["~> 6.1.3", "<7"].freeze
+  # s.add_development_dependency "activemodel", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "activejob", *RAILS_VERSION_SPECIFIER
+  s.add_development_dependency "activerecord", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "activestorage", *RAILS_VERSION_SPECIFIER
+  s.add_development_dependency "actionpack", *RAILS_VERSION_SPECIFIER # ActionController
+  s.add_development_dependency "actionview", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "actionmailer", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "actionmailbox", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "actiontext", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "actioncable", *RAILS_VERSION_SPECIFIER
+  s.add_development_dependency "activesupport", *RAILS_VERSION_SPECIFIER
+  s.add_development_dependency "railties", *RAILS_VERSION_SPECIFIER
 
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec_junit_formatter"

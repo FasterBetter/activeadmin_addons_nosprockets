@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
 
-  RAILS_VERSION_SPECIFIER = ["~> 5.2", ">= 5.2.4.1"].freeze
+  RAILS_VERSION_SPECIFIER = [">= 5.2.4.1", "< 7"].freeze
   # gem "activemodel", *RAILS_VERSION_SPECIFIER
   # gem "activejob", *RAILS_VERSION_SPECIFIER
   gem "activerecord", *RAILS_VERSION_SPECIFIER

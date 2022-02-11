@@ -9,8 +9,8 @@ require "activeadmin_addons/version"
 Gem::Specification.new do |s|
   s.name        = "activeadmin_addons_nosprockets"
   s.version     = ActiveadminAddons::VERSION
-  s.authors     = ["Platanus", "Julio García", "Emilio Blanco", "Leandro Segovia"]
-  s.email       = ["rubygems@platan.us", "julioggonz@gmail.com", "emilioeduardob@gmail.com", "ldlsegovia@gmail.com"]
+  s.authors     = ["Jon Frisby", "Platanus", "Julio García", "Emilio Blanco", "Leandro Segovia"]
+  s.email       = ["jon@fasterbetter.com", "rubygems@platan.us", "julioggonz@gmail.com", "emilioeduardob@gmail.com", "ldlsegovia@gmail.com"]
   s.homepage    = "https://github.com/platanus/activeadmin_addons"
   s.summary     = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"
   s.description = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"

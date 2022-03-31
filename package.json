@@ -9,8 +9,7 @@
   "repository": "https://github.com/platanus/activeadmin_addons.git",
   "author": "Platanus <rubygems@platan.us>",
   "license": "MIT",
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",

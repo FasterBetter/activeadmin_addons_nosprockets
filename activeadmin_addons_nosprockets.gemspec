@@ -17,8 +17,14 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  # s.files = Dir["{app,config,db,lib,vendor/assets}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
+  # s.add_dependency "active_material"
+  # s.add_dependency "railties"
   s.add_dependency "require_all"
+  # s.add_dependency "sassc"
+  # s.add_dependency "sassc-rails"
+  # s.add_dependency "xdan-datetimepicker-rails", "~> 2.5.1"
 
   s.add_development_dependency "aasm"
   s.add_development_dependency "capybara-selenium"
@@ -27,6 +33,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "factory_bot_rails"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"
+  # s.add_development_dependency "image_processing"
   s.add_development_dependency "paperclip"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
@@ -44,11 +51,13 @@ Gem::Specification.new do |s|
   # s.add_development_dependency "actioncable", *RAILS_VERSION_SPECIFIER
   s.add_development_dependency "activesupport", *RAILS_VERSION_SPECIFIER
   s.add_development_dependency "railties", *RAILS_VERSION_SPECIFIER
+  # s.add_development_dependency "rails", *RAILS_VERSION_SPECIFIER
 
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "rubocop", "~> 0.65.0"
   s.add_development_dependency "shoulda-matchers"
+  # s.add_development_dependency "shrine", "~> 3.0"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "webdrivers"
 end

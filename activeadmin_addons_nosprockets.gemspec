@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
 
-  RAILS_VERSION_SPECIFIER = ["~> 6.1.3", "<7"].freeze
+  RAILS_VERSION_SPECIFIER = ["~> 6.1.3", "<7.1"].freeze
   # s.add_development_dependency "activemodel", *RAILS_VERSION_SPECIFIER
   # s.add_development_dependency "activejob", *RAILS_VERSION_SPECIFIER
   s.add_development_dependency "activerecord", *RAILS_VERSION_SPECIFIER

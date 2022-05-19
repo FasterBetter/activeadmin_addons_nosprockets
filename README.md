@@ -1,47 +1,17 @@
-# ActiveAdmin Addons
-[![Gem Version](https://badge.fury.io/rb/activeadmin_addons.svg)](https://badge.fury.io/rb/activeadmin_addons)
+# ActiveAdmin Addons, No-Sprockets
 
-ActiveAdmin Addons will extend your ActiveAdmin and enable a set of addons you can optionally use to improve the ActiveAdmin UI and make it awesome.
+This is a fork of the [activeadmin_addons](https://github.com/platanus/activeadmin_addons) gem that doesn't have hard dependencies on Sprockets/sassc.
 
-## What you get:
+Please see the original for a guide on the functionality available.
 
-#### Rows/Columns
-
-- [Paperclip Attachment](#paperclip-attachment): show file icons on your show/index views.
-- [Paperclip Image](#paperclip-image): show thumbnails on your show/index views.
-- [AASM Integration](#aasm-integration): nice looking tags for states.
-- [Enumerize and Rails Enum Integration](#enumerize-and-rails-enum-integration): nice looking tags for enums.
-- [Boolean Values](#boolean-values): beautiful boolean values.
-- [Toggleable Booleans](#toggleable-boolean-columns): have switches to toggle values directly at the index
-- [Number Formatting](#number-formatting): format you currencies with ease.
-- [List](#list): show Arrays or Hashes like a list.
-
-#### Inputs
-
-- [Select2 Input](#select2-input): cool select boxes for everyone.
-- [Tag Input](#tag-input): to add tags using select2.
-- [Search Select Input](#search-select-input): easy ajax search with activeadmin.
-- [Selected List Input](#selected-list-input): to handle your many to many associations.
-- [Nested Select Input](#nested-select-input): to build related select inputs.
-- [Color Picker Input](#color-picker-input): select colors from a pretty popup.
-- [Date Time Picker Input](#date-time-picker-input): pick date and time comfortably.
-
-#### Filters
-
-- [Numeric Range Filter](#numeric-range-filter): filter your results using a numeric range (i.e. age between 18-30).
-- [Date Time Picker Filter](#date-time-picker-filter): filter your results using a datetime range.
-- [Search Select Filter](#search-select-filter): filter your results using the ajax select input.
-
-#### Themes
-- [No Theme](#no-theme): ActiveAdmin default style.
-- [Material Theme](#material-theme): Material Design style provide by [active_material](https://github.com/vigetlabs/active_material).
+This gem is meant to be a drop-in replacement that hopefully can be retired sooner rather than later.  That said, I haven't tried to exercise all of its functionality at the time of this writing.  Contributions to shore up issues specific to this fork are welcome, including bug reports to notify me of specific breakage.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'activeadmin_addons'
+gem 'activeadmin_addons_nosprockets'
 ```
 
 And then execute:

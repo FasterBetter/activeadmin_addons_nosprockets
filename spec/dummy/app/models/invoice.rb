@@ -1,32 +1,23 @@
-require 'enumerize'
-require 'paperclip'
 require 'aasm'
 
 class Invoice < ActiveRecord::Base
-  extend ::Enumerize
-  include Paperclip::Glue
   include AASM
   include ImageUploader::Attachment(:picture)
+  after_initialize :set_default_state, if: :new_record?
 
   belongs_to :category
   belongs_to :city
   has_and_belongs_to_many :items
   has_and_belongs_to_many :other_items, class_name: 'Item'
 
-  enumerize :state, in: [:pending, :rejected, :approved], default: :pending
+  enum state: {
+    pending: 'pending',
+    rejected: 'rejected',
+    approved: 'approved'
+  }
 
   enum status: { active: 0, archived: 1 }
 
-  has_attached_file :attachment
-  validates_attachment :attachment, content_type: { content_type: "application/pdf" }
-
-  has_attached_file :photo, styles: {
-    big: "600x600>",
-    medium: "300x300>",
-    thumb: "100x100>"
-  }
-
-  validates_attachment :photo, content_type: { content_type: %r{\Aimage\/.*\Z} }
 
   # Uncomment to test validations
   # validates :city, :city_id, :category, :category_id, :updated_at, :number, :item_ids, :color,
@@ -97,5 +88,9 @@ class Invoice < ActiveRecord::Base
       "#C2B400",
       "#B9BF00"
     ]
+  end
+
+  def set_default_state
+    self.state ||= 'pending'
   end
 end

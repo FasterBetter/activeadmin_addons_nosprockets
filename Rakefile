@@ -23,11 +23,7 @@ end
 
 task :tests do
   system "rspec ./spec/lib"
-end
-
-task :all_tests do
   system "rake prepare_assets"
-  system "rake tests"
   system "rspec ./spec/features"
 end
 

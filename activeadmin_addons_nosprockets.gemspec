@@ -19,45 +19,29 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   # s.files = Dir["{app,config,db,lib,vendor/assets}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  # s.add_dependency "active_material"
   # s.add_dependency "railties"
+  s.add_dependency "redcarpet"
   s.add_dependency "require_all"
-  # s.add_dependency "sassc"
-  # s.add_dependency "sassc-rails"
   # s.add_dependency "xdan-datetimepicker-rails", "~> 2.5.1"
 
   s.add_development_dependency "aasm"
   s.add_development_dependency "capybara-selenium"
   s.add_development_dependency "database_cleaner"
-  s.add_development_dependency "enumerize", "~> 2.0"
   s.add_development_dependency "factory_bot_rails"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"
   # s.add_development_dependency "image_processing"
-  s.add_development_dependency "paperclip"
+  s.add_development_dependency "matrix"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
-
-  RAILS_VERSION_SPECIFIER = ["~> 6.1.3", "<7"].freeze
-  # s.add_development_dependency "activemodel", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "activejob", *RAILS_VERSION_SPECIFIER
-  s.add_development_dependency "activerecord", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "activestorage", *RAILS_VERSION_SPECIFIER
-  s.add_development_dependency "actionpack", *RAILS_VERSION_SPECIFIER # ActionController
-  s.add_development_dependency "actionview", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "actionmailer", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "actionmailbox", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "actiontext", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "actioncable", *RAILS_VERSION_SPECIFIER
-  s.add_development_dependency "activesupport", *RAILS_VERSION_SPECIFIER
-  s.add_development_dependency "railties", *RAILS_VERSION_SPECIFIER
-  # s.add_development_dependency "rails", *RAILS_VERSION_SPECIFIER
-
+  s.add_development_dependency "rails", "~> 6.1", ">= 6.1.4.4"
+  s.add_development_dependency "rexml"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "rspec-retry"
   s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "rubocop", "~> 0.65.0"
   s.add_development_dependency "shoulda-matchers"
-  # s.add_development_dependency "shrine", "~> 3.0"
+  s.add_development_dependency "shrine", "~> 3.0"
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "webdrivers"
 end

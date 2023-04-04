@@ -9,15 +9,12 @@ require 'capybara/rspec'
 require 'capybara/rails'
 require 'selenium-webdriver'
 require 'shoulda-matchers'
-require 'enumerize'
-require 'paperclip'
 require 'database_cleaner'
+require 'rspec/retry'
 require 'pry'
 
 ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../')
 Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].each { |f| require f }
-
-Paperclip.options[:log] = false
 
 RSpec.configure do |config|
   config.use_instantiated_fixtures = false
@@ -25,6 +22,8 @@ RSpec.configure do |config|
   config.filter_run_excluding skip: true
   config.run_all_when_everything_filtered = true
   config.use_transactional_fixtures = false
+  config.verbose_retry = true
+  config.display_try_failure_messages = true
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
@@ -37,6 +36,10 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+
+  config.around :each, :js do |ex|
+    ex.run_with_retry retry: 3
   end
 
   # Cache the download of chrome driver for 1 day

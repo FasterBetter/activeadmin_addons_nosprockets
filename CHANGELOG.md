@@ -4,6 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Unreleased
 
+### 2.0.0.beta-0
+
+* Replaces [Select2](https://select2.org/) with [Slim Select](https://slimselectjs.com/) to make it easier to work with newer bundlers like esbuild [#448](https://github.com/platanus/activeadmin_addons/pull/448)
+* Removes support for Paperclip since it has been deprecated. [#450](https://github.com/platanus/activeadmin_addons/pull/450)
+* Removes support for enumerize [#452](https://github.com/platanus/activeadmin_addons/pull/452)
+* Removes support for the Sprockets installation of ActiveAdmin [#451](https://github.com/platanus/activeadmin_addons/pull/452)
+
+### 1.10.0
+
+#### Added
+
+* Added Shrine support for image row and column [#396](https://github.com/platanus/activeadmin_addons/pull/396)
+* Added Markdown row and column [#409](https://github.com/platanus/activeadmin_addons/pull/409)
+* Added translation support for Rails built-in enums in select filters and tag column/row [#442](https://github.com/platanus/activeadmin_addons/pull/442)
+
 ### 1.9.0
 
 ##### Changed

@@ -35,24 +35,16 @@ Check [here](docs/install_generator.md) to see more information about this gener
 Installing this gem will enable the following changes by default:
 
 * The default date input will be `:datepicker` instead of `:date_select`
-* Filters and selects will offer integration with [enumerize](https://github.com/brainspec/enumerize)
+* Select filters will show translated values when used with Rails built-in `enums`
 * All select boxes will use select2
 
 ## Addons
 
 ### Rows/Columns
 
-#### Paperclip Attachment
-
-Displays a paperclip link with attachment related icon into index and show views.
-
-<img src="./docs/images/paperclip-attachment-column.png" height="250" />
-
-[Read more!](docs/paperclip_attachment.md)
-
 #### Images
 
-Display images in the index and show views. This implementation supports [Shrine](https://github.com/shrinerb/shrine) and [Paperclip](https://github.com/thoughtbot/paperclip).
+Display images in the index and show views. This implementation supports [Shrine](https://github.com/shrinerb/shrine).
 
 <img src="./docs/images/paperclip-image-column.png" height="380" />
 
@@ -66,9 +58,9 @@ You can show [aasm](https://github.com/aasm/aasm) values as active admin tags.
 
 [Read more!](docs/aasm_integration.md)
 
-#### Enumerize and Rails Enum Integration
+#### Rails Enum Integration
 
-You can show Rails' built in `enums` or [enumerize](https://github.com/brainspec/enumerize) values as active admin tags.
+You can show Rails' built in `enums` as active admin tags.
 
 <img src="./docs/images/enumerize-tag-column.png" height="250" />
 
@@ -106,47 +98,55 @@ You can show `Array` or `Hash` values as html lists.
 
 [Read more!](docs/list.md)
 
+#### Markdown
+
+You can render text as markdown.
+
+<img src="./docs/images/markdown-row.png" height="250" />
+
+[Read more!](docs/markdown.md)
+
 ### Inputs
 
-#### Select2 Input
+#### Slim Select Input
 
-With [select2](http://ivaynberg.github.io/select2/) the select control looks nicer, it works great with large collections.
+With [Slim Select](https://slimselectjs.com/) the select control looks nicer, it works great with large collections.
 
-<img src="./docs/images/select2-default.gif" height="200" />
+<img src="./docs/images/slim-select.gif" />
 
-[Read more!](docs/select2_default.md)
+[Read more!](docs/slim-select_default.md)
 
 #### Tag Input
 
-Using tags input, you can add tags using select2.
+Using tags input, you can add tags using slim select.
 
-<img src="./docs/images/select2-tags.gif" height="200" />
+<img src="./docs/images/slim-select-tags.gif" />
 
-[Read more!](docs/select2_tags.md)
+[Read more!](docs/slim-select_tags.md)
 
 #### Selected List Input
 
 This form control allows you to handle your many to many associations.
 
-<img src="./docs/images/select2-selected-list.gif" height="400" />
+<img src="./docs/images/slim-select-selected-list.gif" />
 
-[Read more!](docs/select2_selected_list.md)
+[Read more!](docs/slim-select_selected_list.md)
 
 #### Search Select Input
 
 Using `search_select` input, you can easily add ajax search to activeadmin.
 
-<img src="./docs/images/select2-search-select.gif" height="180" />
+<img src="./docs/images/slim-select-search-select.gif" />
 
-[Read more!](docs/select2_search.md)
+[Read more!](docs/slim-select_search.md)
 
 #### Nested Select Input
 
 Using `nested_select` input, you can build related select inputs.
 
-<img src="./docs/images/select2-nested-select-default.gif" height="230" />
+<img src="./docs/images/slim-select-nested-select.gif" />
 
-[Read more!](docs/select2_nested_select.md)
+[Read more!](docs/slim-select_nested_select.md)
 
 ### Color Picker Input
 
@@ -208,28 +208,6 @@ filter :category_id, as: :search_select_filter
 
 #### NO Theme
 Use default active_admin theme.
-
-#### Material Theme
-##### Not compatible when Active Admin has been installed in webpack mode
-
-Show material design theme using [active_material](https://github.com/vigetlabs/active_material). If you want to use it, you should run the generator using the flag `theme` as follow:
-
-```ruby
-rails g activeadmin_addons:install --theme material
-```
-
-Also, you can modify primary color, and all other theme colors, in the first lines of the file: ` app/assets/stylesheets/active_admin.scss`
-```scss
-$am-theme-primary: YOUR-COLOR;
-...
-other colors
-...
-@import 'activeadmin_addons/material';
-```
-
-Take care of defining these variables before the import of `@import 'activeadmin_addons/material';`.
-
-For material documentation you should go to [gem documentation](http://code.viget.com/active_material/docs/api/).
 
 ## Publishing
 

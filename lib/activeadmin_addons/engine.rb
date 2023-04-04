@@ -1,6 +1,7 @@
 module ActiveAdminAddons
   module Rails
     class Engine < ::Rails::Engine
+      # require "xdan-datetimepicker-rails"
       require "require_all"
 
       initializer "initialize addons" do |app|

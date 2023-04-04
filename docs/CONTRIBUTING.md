@@ -33,9 +33,8 @@ And in another tab:
 bin/webpack-dev-server
 ```
 
-**With Sprockets:**
 
-__Sprockets is explicitly not supported on this fork.  Please see the upstream.__
+> It is a good idea to add to the dummy app any new functionality. See for example the file: `/spec/dummy/app/admin/invoices.rb`
 
 ## Testing
 
@@ -45,11 +44,12 @@ If you're using homebrew on OS X you can do: `brew install chromedriver`.
 To run the tests you can do, in the root of the gem:
 
 ```
-# For running the full setup
-bundle exec rake all_tests
-
 # For running helper specs (/lib directory)
 bundle exec rake tests
+
+# For running with all tests
+bundle exec rake tests
+
 ```
 
 - The addons specs we put them inside `/spec/features`.

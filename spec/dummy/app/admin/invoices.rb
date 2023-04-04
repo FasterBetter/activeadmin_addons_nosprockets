@@ -1,6 +1,6 @@
 ActiveAdmin.register Invoice do
-  permit_params :legal_date, :number, :paid, :state, :attachment, :photo, :category_id, :city_id,
-    :amount, :color, :updated_at, :picture, :active, item_ids: [], other_item_ids: []
+  permit_params :legal_date, :number, :paid, :state, :category_id, :city_id,
+    :amount, :color, :updated_at, :picture, :active, :description, item_ids: [], other_item_ids: []
 
   filter :id, as: :numeric_range_filter
 
@@ -16,11 +16,10 @@ ActiveAdmin.register Invoice do
     id_column
     tag_column :state, interactive: true
     bool_column :paid
-    image_column :photo, style: :thumb
     image_column :picture, style: :jpg_small
-    attachment_column :attachment
     number_column :amount, as: :currency, unit: "$", separator: ","
     toggle_bool_column :active
+    markdown_column :description
     column :created_at
     actions
   end
@@ -34,12 +33,11 @@ ActiveAdmin.register Invoice do
       list_row :skills, list_type: :ol
       list_row :contact, localize: true
       list_row :details, localize: true
-      image_row("Mi foto", :photo, style: :big, &:photo)
-      attachment_row("My doc", :attachment, label: 'Download file', truncate: false, &:attachment)
       image_row("Mi picture", :picture, image_options: { width: 100 }, &:picture)
       row :legal_date
       number_row("Monto", :amount, as: :human, &:amount)
       row :city
+      markdown_row(:description)
       bool_row :active
     end
 
@@ -59,7 +57,7 @@ ActiveAdmin.register Invoice do
                              ]
                            }
 
-      f.input :state
+      f.input :state, as: :select
 
       f.input :category_id, as: :search_select,
                             url: proc { "/admin/categories" },
@@ -83,11 +81,9 @@ ActiveAdmin.register Invoice do
 
       f.input :other_item_ids, as: :tags, collection: Item.all.limit(5)
 
-      f.input :attachment
+      f.input :description
 
       f.input :legal_date
-
-      f.input :photo
 
       f.input :picture, as: :file
 

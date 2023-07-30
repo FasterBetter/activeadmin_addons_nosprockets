@@ -1,6 +1,5 @@
-# coding: utf-8
 # rubocop:disable Metrics/LineLength
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require "activeadmin_addons/version"
@@ -15,6 +14,7 @@ Gem::Specification.new do |s|
   s.summary     = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"
   s.description = "Fork of activeadmin_addons that doesn't depend on/support Sprockets"
   s.license     = "MIT"
+  s.required_ruby_version = '>= 2.7.0'
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   # s.files = Dir["{app,config,db,lib,vendor/assets}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -32,14 +32,18 @@ Gem::Specification.new do |s|
   s.add_development_dependency "guard-rspec"
   # s.add_development_dependency "image_processing"
   s.add_development_dependency "matrix"
+  s.add_development_dependency "pry-byebug"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "puma"
   s.add_development_dependency "rails", "~> 6.1", ">= 6.1.4.4"
   s.add_development_dependency "rexml"
+  s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec-retry"
-  s.add_development_dependency "rspec_junit_formatter"
-  s.add_development_dependency "rubocop", "~> 0.65.0"
+  s.add_development_dependency "rubocop", "~> 1.50"
+  s.add_development_dependency "rubocop-performance"
+  s.add_development_dependency "rubocop-rails"
+  s.add_development_dependency "rubocop-rspec", "~> 2.2"
   s.add_development_dependency "shoulda-matchers"
   s.add_development_dependency "shrine", "~> 3.0"
   s.add_development_dependency "sqlite3"

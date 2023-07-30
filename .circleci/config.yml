@@ -14,7 +14,7 @@ executors:
     parameters:
       ruby-version:
         description: "Ruby version"
-        default: "2.7"
+        default: "3.2"
         type: string
     docker:
       - image: *ruby-image
@@ -121,6 +121,11 @@ jobs:
             gem build activeadmin_addons.gemspec
             version_tag=$(git describe --tags)
             gem push activeadmin_addons-${version_tag#v}.gem
+      - run:
+          name: Publish to npm
+          command: |
+            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm publish
 
 workflows:
   version: 2
@@ -131,7 +136,7 @@ workflows:
       - test:
           matrix:
             parameters:
-              ruby-version: ["2.6", "2.7", "3.0", "3.1"]
+              ruby-version: ["2.7", "3.0", "3.1", "3.2"]
       - deploy:
           context: org-global
           filters:

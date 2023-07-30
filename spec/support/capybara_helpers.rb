@@ -31,8 +31,8 @@ module CapybaraHelpers
     end
   end
 
-  def expect_slimselect_options_count_to_eq(count, id=nil)
-    id = slimselect_original_select_id unless id
+  def expect_slimselect_options_count_to_eq(count, id = nil)
+    id ||= slimselect_original_select_id
     expect(page).to have_css(".ss-content[data-id=#{id}] .ss-option", count: count, visible: :all)
   end
 
@@ -76,7 +76,7 @@ module CapybaraHelpers
   end
 
   def pick_slimselect_entered_option(item_text, display_name = nil)
-    display_name = item_text unless display_name
+    display_name ||= item_text
     fill_slimselect_input(item_text)
     click_slimselect_option(display_name)
   end
@@ -96,6 +96,12 @@ module CapybaraHelpers
   def expect_slimselect_result_text_to_eq(result_number, text)
     expect(page).to have_css(
       "div.ss-option:nth-child(#{result_number})", text: /#{text}/
+    )
+  end
+
+  def expect_slimselect_no_result
+    expect(page).to have_css(
+      "div.ss-search", text: 'No Result'
     )
   end
 

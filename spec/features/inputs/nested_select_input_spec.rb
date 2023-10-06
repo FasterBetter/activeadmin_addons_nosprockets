@@ -238,13 +238,13 @@ describe "Nested Select Input", type: :feature do
       register_page(City, false) {}
 
       register_form(Invoice, false) do |f|
-        f.input :city, as: :nested_select,
-                       level_1: { attribute: :country },
-                       level_2: {
-                         attribute: :region,
-                         filters: { name_contains: 'Met' }
-                       },
-                       level_3: { attribute: :city }
+        f.input :city_id, as: :nested_select,
+                          level_1: { attribute: :country_id },
+                          level_2: {
+                            attribute: :region_id,
+                            filters: { name_cont: 'Met' }
+                          },
+                          level_3: { attribute: :city_id }
       end
 
       create_cities

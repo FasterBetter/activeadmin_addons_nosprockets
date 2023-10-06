@@ -6,9 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * Backport [#477](https://github.com/platanus/activeadmin_addons/pull/477) to have ActiveAdmin v3 compatibility [#479](https://github.com/platanus/activeadmin_addons/pull/479)
 
+### 2.0.0.beta-3
+
 #### Added
 
-* Add Ruby 3.2 support
+* Add Ruby 3.2 support [#474](https://github.com/platanus/activeadmin_addons/pull/474)
+* Add ActiveAdmin v3 support [#477](https://github.com/platanus/activeadmin_addons/pull/477)
+  * Note that changes made should be backwards compatible with ActiveAdmin 2.x, so this is not a breaking change
 
 ### 2.0.0.beta-2
 
@@ -31,6 +35,10 @@ Skipped
 * Removes support for Paperclip since it has been deprecated. [#450](https://github.com/platanus/activeadmin_addons/pull/450)
 * Removes support for enumerize [#452](https://github.com/platanus/activeadmin_addons/pull/452)
 * Removes support for the Sprockets installation of ActiveAdmin [#451](https://github.com/platanus/activeadmin_addons/pull/451)
+
+### 1.10.1
+
+* Backport [#477](https://github.com/platanus/activeadmin_addons/pull/477) to have ActiveAdmin v3 compatibility [#479](https://github.com/platanus/activeadmin_addons/pull/479)
 
 ### 1.10.0
 
